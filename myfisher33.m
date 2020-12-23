@@ -143,17 +143,6 @@ np=exp(Kf-sum(zf,2)); %compute the p-value of each possible matrix
 P=sum(np(np<=op));
 
 %display results
-tr=repmat('-',1,65); %Set up the divisor
-disp(' ')
-fprintf('3x3 matrix Fisher''s exact test: %0.0f tables were evaluated\n',et2)
-disp(tr)
-fprintf('\t\t p-value (2-tails): %0.10f\n',P); 
-disp(tr)
-fprintf('Mid-p correction: %0.10f\n',0.5*op+sum(np(np<op))); 
-disp(tr)
-disp(' ')
-
-%display results
 tr=repmat('-',1,80);
 disp(tr)
 disp('3x3 matrix Fisher''s exact test')
